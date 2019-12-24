@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row header">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="title">Touchnote Weather Forecast</div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="city-selector">
+                <select id="city-select" (click)="getWeatherForecast()"></select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row data-container">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="temp-summary">
+                <div class="temp">
+                    {{ forecast.temperature }}<span>°C</span>
+                </div>
+                <div class="summary">
+                    {{ forecast.summary }}
+                </div>
+            </div>
+            <div class="location">{{ forecast.location }}</div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="weather-data">
+                <div class="humidity weather-data-item">
+                    <span class="label"> Humidity : </span>
+                    <span class="value"> {{ forecast.humidity }} % </span>
+                </div>
+                <div class="weather-data-item">
+                    <span class="label"> Chance of Rain : </span>
+                    <span class="value"> {{ forecast.precipProbability }} % </span>
+                </div>
+                <div class="weather-data-item">
+                    <span class="label"> Date : </span>
+                    <span class="value"> {{ forecast.date }} - </span>
+                    <span class="value"> {{ forecast.month }} - </span>
+                    <span class="value"> {{ forecast.year }} </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
